@@ -14,3 +14,4 @@ const user = new mongoose.Schema({
     ]
 });
 
+// add stuff here later
