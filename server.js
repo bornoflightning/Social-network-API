@@ -1,17 +1,15 @@
-// const mongoose = require('mongoose');
+const express = require('express');
+const db = require('./config/connection');
+const routes = require('routes');
 
-// // define the schema, name it and create the model
+// create port variable here
+const app = express();
+const PORT = process.env.PORT || 3001;
 
-// const user = new mongoose.Schema({
-//     username: {type: String, unique: true, required: true, trimmed: true},
-//     email: {type: String, unique: true, required: true, trimmed: true},
-//     thoughts: [
-//         _id: thougth.id,
-        
-//     ],
-//     friends: [
-//         _id: friend.id
-//     ]
-// });
+app.use(express.json());
+app.use(express.urlencoded({ exnteded: false}));
+app.use(routes);
 
-// // add stuff here later
+db.once('open', ()=> {
+    app.listen(PORT, () => console.log(`listening on port ${PORT}`));
+})
