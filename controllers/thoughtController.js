@@ -4,7 +4,6 @@ const { Thought, User } = require('../models')
 const thoughtController = {
     //this is the code that requests all thoughts
     allThoughts(req, res) {
-
         Thought.find()
         .then((thoughts) => res.json(thoughts))
         .catch((error) => res.status(500).json(error));
