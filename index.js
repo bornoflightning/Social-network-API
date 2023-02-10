@@ -11,5 +11,6 @@ app.use(express.urlencoded({ exnteded: false}));
 app.use(routes);
 
 db.once('open', ()=> {
+    console.log("this is working");
     app.listen(PORT, () => console.log(`listening on port ${PORT}`));
 })
