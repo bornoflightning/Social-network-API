@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node index.js",
     "nodemon": "nodemon index.js"
   },
   "repository": {
@@ -20,6 +20,8 @@
   "homepage": "https://github.com/bornoflightning/Social-network-API#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongod": "^2.0.0",
     "mongoose": "^6.8.0"
   },
   "devDependencies": {

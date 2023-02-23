@@ -31,7 +31,7 @@ connection.once('open', async () => {
     const thoughtSet = [
         {
             thoughtText: 'I was thinking a thought',
-            username: 'IlikeLemons'
+            username: 'IlikeLemons',
         },
         {
             thoughtText: 'There is apple juice, there is orange juice, how come there is no banana juice?',
@@ -43,8 +43,8 @@ connection.once('open', async () => {
         },
         {
             thoughtText: 'Activity times the quality equals results',
-            username: 'RaichuMachu'
-        },
+            username: 'RaichuMachu',
+        }
     ]
     
     await User.collection.insertMany(userSet)
